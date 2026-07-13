@@ -3,348 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estilo Vintage Barbearia | Curitiba-PR</title>
+    <title>Estilo Vintage Barbearia • Curitiba</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        vintage: {
-                            marrom: '#2B1B0F',
-                            bordo: '#8B2323',
-                            dourado: '#D4AF37',
-                            creme: '#F8F4E9',
-                            madeira: '#654321'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
-            .border-vintage { border: 3px solid #D4AF37; }
-            .bg-texture { background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none' stroke='%232B1B0F' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E"); }
-            .barber-pole { background: repeating-linear-gradient(45deg, #8B2323 0, #8B2323 15px, #FFFFFF 15px, #FFFFFF 30px, #000000 30px, #000000 45px); }
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .heading { font-family: 'Playfair Display', serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(28,28,28,0.65), rgba(28,28,28,0.75)), 
+                             url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
         }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans bg-vintage-creme text-vintage-marrom overflow-x-hidden">
+<body class="bg-[#1C1C1C] text-[#F5F0E6]">
 
-<!-- Barra Superior -->
-<header class="fixed w-full top-0 left-0 z-50 bg-vintage-marrom/95 backdrop-blur-sm text-white shadow-lg">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <div class="w-6 h-10 barber-pole rounded-full"></div>
-            <h1 class="text-xl md:text-2xl font-serif font-bold text-vintage-dourado">Estilo Vintage Barbearia</h1>
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="heading text-6xl md:text-7xl font-bold mb-4 tracking-tight text-white">ESTILO VINTAGE</h1>
+            <p class="text-4xl md:text-5xl mb-6 text-[#E8B923]">Barbearia</p>
+            <p class="text-2xl mb-10 max-w-lg mx-auto">Cortes clássicos. Barbas perfeitas. Experiência que marca.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#agendar" 
+                   class="bg-[#E8B923] hover:bg-[#D4A017] text-black font-bold px-10 py-5 text-xl rounded-2xl transition-all shadow-lg">
+                    AGENDAR HORÁRIO
+                </a>
+                <a href="tel:+5541984568034" 
+                   class="border-2 border-[#E8B923] hover:bg-[#E8B923] hover:text-black font-bold px-10 py-5 text-xl rounded-2xl transition-all">
+                    (41) 98456-8034
+                </a>
+            </div>
         </div>
-        <div class="hidden md:flex items-center gap-6">
-            <a href="#servicos" class="hover:text-vintage-dourado transition-colors">Serviços</a>
-            <a href="#horarios" class="hover:text-vintage-dourado transition-colors">Horários</a>
-            <a href="#localizacao" class="hover:text-vintage-dourado transition-colors">Localização</a>
-            <a href="#contato" class="bg-vintage-bordo hover:bg-vintage-bordo/90 px-4 py-2 rounded font-medium transition-all">Agendar Agora</a>
-        </div>
-        <button class="md:hidden text-2xl" id="menuToggle">
-            <i class="fa fa-bars"></i>
-        </button>
-    </div>
-    <!-- Menu Mobile -->
-    <div id="mobileMenu" class="hidden bg-vintage-marrom/95 absolute w-full shadow-lg">
-        <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
-            <a href="#servicos" class="hover:text-vintage-dourado">Serviços</a>
-            <a href="#horarios" class="hover:text-vintage-dourado">Horários</a>
-            <a href="#localizacao" class="hover:text-vintage-dourado">Localização</a>
-            <a href="#contato" class="bg-vintage-bordo text-center py-2 rounded">Agendar Agora</a>
-        </div>
-    </div>
-</header>
+    </section>
 
-<!-- Seção Principal / Hero -->
-<section class="pt-28 pb-20 md:pt-36 md:pb-28 bg-vintage-marrom bg-texture text-white">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-        <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-vintage-dourado leading-tight text-shadow-sm">
-                Tradição & Estilo Autêntico
-            </h2>
-            <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-xl mx-auto md:mx-0">
-                Há anos cuidando da aparência masculina com técnicas clássicas, navalha afiada e produtos de qualidade. Uma experiência que vai muito além do corte.
+    <!-- SOBRE -->
+    <section class="py-20 bg-[#2E2E2E]">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-[#E8B923] uppercase tracking-widest text-sm">Boa Vista • Curitiba</span>
+                <h2 class="heading text-5xl mt-3 mb-6">Onde o estilo clássico encontra o homem moderno</h2>
+                <p class="text-lg leading-relaxed">
+                    Na Estilo Vintage Barbearia, cada corte é feito com atenção e técnica. 
+                    Ambiente acolhedor, barbeiros experientes e o verdadeiro ritual de barbearia.
+                </p>
+                <p class="mt-6 text-lg">Planos semanais e ilimitados disponíveis.</p>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/id/866/800/600" alt="Interior Barbearia Vintage" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="py-20 bg-[#1C1C1C]">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="heading text-5xl text-center mb-16">Nossos Destaques</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#2E2E2E] p-8 rounded-3xl hover:-translate-y-2 transition-all">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Corte Masculino" class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-2xl font-semibold mb-2">Corte Masculino</h3>
+                    <p class="text-[#E8B923] text-3xl font-bold mb-4">R$ 45</p>
+                    <p class="text-gray-300">Degradê, social, tesoura, fade e estilos modernos.</p>
+                </div>
+
+                <div class="bg-[#2E2E2E] p-8 rounded-3xl hover:-translate-y-2 transition-all">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Barba" class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-2xl font-semibold mb-2">Barba Completa</h3>
+                    <p class="text-[#E8B923] text-3xl font-bold mb-4">R$ 40</p>
+                    <p class="text-gray-300">Toalha quente, design e hidratação premium.</p>
+                </div>
+
+                <div class="bg-[#2E2E2E] p-8 rounded-3xl hover:-translate-y-2 transition-all">
+                    <img src="https://picsum.photos/id/251/600/400" alt="Combo" class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-2xl font-semibold mb-2">Combo Corte + Barba</h3>
+                    <p class="text-[#E8B923] text-3xl font-bold mb-4">R$ 75</p>
+                    <p class="text-gray-300">A melhor experiência com desconto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="py-20 bg-[#2E2E2E]">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="heading text-5xl text-center mb-12">Galeria de Cortes</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://picsum.photos/id/64/600/600" alt="Corte Degradê" class="rounded-2xl hover:scale-105 transition-all duration-300">
+                <img src="https://picsum.photos/id/201/600/600" alt="Barba Modelada" class="rounded-2xl hover:scale-105 transition-all duration-300">
+                <img src="https://picsum.photos/id/866/600/600" alt="Corte Clássico" class="rounded-2xl hover:scale-105 transition-all duration-300">
+                <img src="https://picsum.photos/id/1015/600/600" alt="Estilo Vintage" class="rounded-2xl hover:scale-105 transition-all duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA AGENDAR -->
+    <section id="agendar" class="py-24 bg-gradient-to-br from-[#B38B5E] to-[#E8B923] text-black">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="heading text-6xl mb-6">Transforme seu visual hoje</h2>
+            <p class="text-2xl mb-10">Vagas limitadas. Atendimento com hora marcada.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="tel:+5541984568034" 
+                   class="bg-black text-white font-bold px-12 py-6 text-2xl rounded-2xl hover:bg-gray-900 transition">
+                    LIGAR AGORA
+                </a>
+                <a href="https://wa.me/5541984568034" target="_blank"
+                   class="bg-black text-white font-bold px-12 py-6 text-2xl rounded-2xl hover:bg-gray-900 transition">
+                    WHATSAPP
+                </a>
+            </div>
+            
+            <p class="mt-10 text-lg">
+                📍 Rua Lodovico Geronazzo, 838 - Boa Vista, Curitiba<br>
+                <a href="https://www.instagram.com/estilovintage_barbershop/" target="_blank" class="underline">Instagram @estilovintage_barbershop</a>
             </p>
-            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="#contato" class="bg-vintage-bordo hover:bg-vintage-bordo/90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl">
-                    Agendar Meu Horário
-                </a>
-                <a href="#servicos" class="bg-white/10 hover:bg-white/20 border border-vintage-dourado/50 px-8 py-3 rounded-lg font-semibold text-lg transition-all backdrop-blur-sm">
-                    Ver Serviços
-                </a>
-            </div>
-            <div class="mt-8 flex items-center gap-4 justify-center md:justify-start">
-                <div class="flex">
-                    <i class="fa fa-star text-vintage-dourado"></i>
-                    <i class="fa fa-star text-vintage-dourado"></i>
-                    <i class="fa fa-star text-vintage-dourado"></i>
-                    <i class="fa fa-star text-vintage-dourado"></i>
-                    <i class="fa fa-star text-vintage-dourado"></i>
-                </div>
-                <span class="text-gray-200">4.9/5 • Mais de 500 clientes satisfeitos</span>
-            </div>
         </div>
-        <div class="md:w-1/2">
-            <div class="relative rounded-lg overflow-hidden border-vintage shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barbearia Estilo Vintage" class="w-full h-auto object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-vintage-marrom/60 to-transparent"></div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Seção Serviços -->
-<section id="servicos" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold text-vintage-marrom">Nossos Serviços</h2>
-            <div class="w-24 h-1 bg-vintage-dourado mx-auto mt-4 mb-6"></div>
-            <p class="text-gray-600 text-lg">Tudo o que você precisa para manter seu visual impecável com qualidade e tradição.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Serviço 1 -->
-            <div class="bg-vintage-creme rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-vintage-bordo">
-                <div class="text-vintage-bordo text-4xl mb-4">
-                    <i class="fa fa-cut"></i>
-                </div>
-                <h3 class="font-serif text-xl font-bold mb-3">Corte de Cabelo Clássico</h3>
-                <p class="text-gray-600 mb-4">Cortes tradicionais e modernos, adaptados ao formato do seu rosto e estilo de vida.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-semibold text-vintage-marrom">R$ 35,00</span>
-                    <span class="text-sm text-gray-500">30 min</span>
-                </div>
-            </div>
-
-            <!-- Serviço 2 -->
-            <div class="bg-vintage-creme rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-vintage-bordo">
-                <div class="text-vintage-bordo text-4xl mb-4">
-                    <i class="fa fa-scissors"></i>
-                </div>
-                <h3 class="font-serif text-xl font-bold mb-3">Barba Completa na Navalha</h3>
-                <p class="text-gray-600 mb-4">Modelagem, hidratação e acabamento com navalha, técnica que deixa a pele lisinha e renovada.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-semibold text-vintage-marrom">R$ 28,00</span>
-                    <span class="text-sm text-gray-500">25 min</span>
-                </div>
-            </div>
-
-            <!-- Serviço 3 -->
-            <div class="bg-vintage-creme rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-vintage-bordo">
-                <div class="text-vintage-bordo text-4xl mb-4">
-                    <i class="fa fa-magic"></i>
-                </div>
-                <h3 class="font-serif text-xl font-bold mb-3">Pacote Corte + Barba</h3>
-                <p class="text-gray-600 mb-4">Experiência completa: corte de cabelo + barba + hidratação facial + finalização com produtos premium.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-semibold text-vintage-marrom">R$ 55,00</span>
-                    <span class="text-sm text-gray-500">50 min</span>
-                </div>
-            </div>
-
-            <!-- Serviço 4 -->
-            <div class="bg-vintage-creme rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-vintage-bordo">
-                <div class="text-vintage-bordo text-4xl mb-4">
-                    <i class="fa fa-leaf"></i>
-                </div>
-                <h3 class="font-serif text-xl font-bold mb-3">Hidratação Capilar</h3>
-                <p class="text-gray-600 mb-4">Tratamento profundo para cabelos secos, ressecados ou com queda, recupera brilho e resistência.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-semibold text-vintage-marrom">R$ 22,00</span>
-                    <span class="text-sm text-gray-500">20 min</span>
-                </div>
-            </div>
-
-            <!-- Serviço 5 -->
-            <div class="bg-vintage-creme rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-vintage-bordo">
-                <div class="text-vintage-bordo text-4xl mb-4">
-                    <i class="fa fa-eyedropper"></i>
-                </div>
-                <h3 class="font-serif text-xl font-bold mb-3">Acabamento e Penteado</h3>
-                <p class="text-gray-600 mb-4">Finalização com pomadas, brilhantinas e ceras para manter o estilo por mais tempo, com toque profissional.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-semibold text-vintage-marrom">R$ 15,00</span>
-                    <span class="text-sm text-gray-500">10 min</span>
-                </div>
-            </div>
-
-            <!-- Serviço 6 -->
-            <div class="bg-vintage-creme rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-vintage-bordo">
-                <div class="text-vintage-bordo text-4xl mb-4">
-                    <i class="fa fa-heart"></i>
-                </div>
-                <h3 class="font-serif text-xl font-bold mb-3">Limpeza de Pele</h3>
-                <p class="text-gray-600 mb-4">Remoção de impurezas, esfoliação e máscara hidratante, ideal para homens que cuidam da saúde da pele.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-lg font-semibold text-vintage-marrom">R$ 30,00</span>
-                    <span class="text-sm text-gray-500">35 min</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-12 text-center">
-            <a href="#contato" class="inline-block bg-vintage-marrom hover:bg-vintage-marrom/90 text-white px-8 py-3 rounded-lg font-semibold transition-all shadow-lg">
-                Agendar Agora
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Seção Horários e Localização -->
-<section id="horarios" class="py-20 bg-vintage-marrom/5">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Horários -->
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-                <h3 class="font-serif text-2xl font-bold mb-6 text-vintage-marrom">
-                    <i class="fa fa-clock-o mr-2"></i> Horário de Funcionamento
-                </h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-3">
-                        <span class="font-medium">Segunda-feira</span>
-                        <span>09h às 19h</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-3">
-                        <span class="font-medium">Terça a Sexta</span>
-                        <span>09h às 20h</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-100 pb-3">
-                        <span class="font-medium">Sábado</span>
-                        <span>09h às 17h</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="font-medium">Domingo</span>
-                        <span class="text-gray-500">Fechado</span>
-                    </div>
-                </div>
-                <div class="mt-6 pt-4 border-t border-gray-100">
-                    <p class="text-sm text-gray-600">* Atendimento mediante agendamento ou por ordem de chegada.</p>
-                </div>
-            </div>
-
-            <!-- Localização -->
-            <div id="localizacao" class="bg-white p-8 rounded-lg shadow-lg">
-                <h3 class="font-serif text-2xl font-bold mb-6 text-vintage-marrom">
-                    <i class="fa fa-map-marker mr-2"></i> Onde Estamos
-                </h3>
-                <p class="text-lg mb-4">Curitiba - PR</p>
-                <p class="text-gray-600 mb-6">Região central, fácil acesso e estacionamento nas proximidades.</p>
-                <a href="https://maps.app.goo.gl/FwHzVrovRdGbmm9Y9" target="_blank" class="inline-flex items-center gap-2 bg-vintage-bordo hover:bg-vintage-bordo/90 text-white px-5 py-2 rounded-lg transition-all">
-                    <i class="fa fa-map"></i> Ver no Google Maps
-                </a>
-                <div class="mt-6 w-full h-40 bg-gray-200 rounded flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mapa" class="w-full h-full object-cover rounded">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Seção Contato -->
-<section id="contato" class="py-20 bg-vintage-marrom text-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold text-vintage-dourado">Agende Seu Horário</h2>
-            <div class="w-24 h-1 bg-vintage-dourado mx-auto mt-4 mb-6"></div>
-            <p class="text-gray-200 text-lg">Escolha a forma mais fácil para falar com a gente e garantir seu atendimento.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-vintage-dourado/30">
-                <h3 class="font-serif text-2xl font-bold mb-6 text-vintage-dourado">Fale Conosco</h3>
-                <div class="space-y-5">
-                    <a href="tel:+5541999999999" class="flex items-center gap-4 hover:text-vintage-dourado transition-colors">
-                        <i class="fa fa-phone text-2xl w-8"></i>
-                        <span>(41) 99999-9999</span>
-                    </a>
-                    <a href="https://wa.me/5541999999999" target="_blank" class="flex items-center gap-4 hover:text-vintage-dourado transition-colors">
-                        <i class="fa fa-whatsapp text-2xl w-8"></i>
-                        <span>(41) 99999-9999 • WhatsApp</span>
-                    </a>
-                    <a href="https://maps.app.goo.gl/FwHzVrovRdGbmm9Y9" target="_blank" class="flex items-center gap-4 hover:text-vintage-dourado transition-colors">
-                        <i class="fa fa-map-marker text-2xl w-8"></i>
-                        <span>Curitiba - PR</span>
-                    </a>
-                    <a href="#" class="flex items-center gap-4 hover:text-vintage-dourado transition-colors">
-                        <i class="fa fa-instagram text-2xl w-8"></i>
-                        <span>@estilovintagebarbearia</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-lg text-vintage-marrom">
-                <h3 class="font-serif text-2xl font-bold mb-6">Envie uma Mensagem</h3>
-                <form>
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium mb-1">Nome completo</label>
-                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-vintage-bordo" placeholder="Seu nome">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium mb-1">Telefone / WhatsApp</label>
-                        <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-vintage-bordo" placeholder="(41) 9XXXX-XXXX">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium mb-1">Serviço desejado</label>
-                        <select class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-vintage-bordo">
-                            <option>Corte de Cabelo</option>
-                            <option>Barba Completa</option>
-                            <option>Corte + Barba</option>
-                            <option>Outros</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="w-full bg-vintage-bordo hover:bg-vintage-bordo/90 text-white py-3 rounded-lg font-semibold text-lg transition-all shadow-md">
-                        Enviar Solicitação
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Rodapé -->
-<footer class="bg-vintage-marrom text-gray-300 py-8 border-t border-vintage-dourado/20">
-    <div class="container mx-auto px-4 text-center">
-        <div class="flex items-center justify-center gap-2 mb-4">
-            <div class="w-5 h-8 barber-pole rounded-full"></div>
-            <h3 class="font-serif text-xl font-bold text-vintage-dourado">Estilo Vintage Barbearia</h3>
-        </div>
-        <p class="mb-2">Curitiba - PR | Desde 20XX</p>
-        <p class="text-sm text-gray-400">© 2026 Estilo Vintage Barbearia. Todos os direitos reservados.</p>
-        <div class="mt-4 flex justify-center gap-4 text-xl">
-            <a href="#" class="hover:text-vintage-dourado"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="hover:text-vintage-dourado"><i class="fa fa-facebook"></i></a>
-            <a href="https://wa.me/5541999999999" class="hover:text-vintage-dourado"><i class="fa fa-whatsapp"></i></a>
-        </div>
-    </div>
-</footer>
-
-<!-- Botão Flutuante WhatsApp -->
-<a href="https://wa.me/5541999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-xl z-40">
-    <i class="fa fa-whatsapp"></i>
-</a>
-
-<!-- Script Simples para Menu Mobile -->
-<script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+    <footer class="bg-black py-12 text-center text-sm text-gray-400">
+        <p>Estilo Vintage Barbearia © 2026 • Todos os direitos reservados</p>
+    </footer>
 
 </body>
 </html>
