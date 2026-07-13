@@ -5,167 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilo Vintage Barbearia • Curitiba</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .heading { font-family: 'Playfair Display', serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(26,26,26,0.75), rgba(26,26,26,0.85)), url('https://picsum.photos/id/1015/2000/1200');
+            background-image: linear-gradient(rgba(28,28,28,0.65), rgba(28,28,28,0.75)), 
+                             url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-        .barber-gold { color: #D4AF37; }
     </style>
 </head>
-<body class="bg-[#1A1A1A] text-[#F5F0E6]">
+<body class="bg-[#1C1C1C] text-[#F5F0E6]">
 
     <!-- HERO -->
     <section class="hero-bg h-screen flex items-center justify-center text-center relative">
         <div class="max-w-4xl mx-auto px-6">
-            <h1 class="heading text-7xl md:text-8xl font-bold mb-4 tracking-tight">ESTILO VINTAGE</h1>
-            <p class="text-3xl md:text-4xl mb-8 text-[#D4AF37]">Barbearia • Boa Vista, Curitiba</p>
-            <p class="text-xl md:text-2xl mb-12 max-w-md mx-auto">Cortes clássicos, barbas impecáveis e experiência premium. Volte no tempo com estilo moderno.</p>
+            <h1 class="heading text-6xl md:text-7xl font-bold mb-4 tracking-tight text-white">ESTILO VINTAGE</h1>
+            <p class="text-4xl md:text-5xl mb-6 text-[#E8B923]">Barbearia</p>
+            <p class="text-2xl mb-10 max-w-lg mx-auto">Cortes clássicos. Barbas perfeitas. Experiência que marca.</p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#agendar" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})" 
-                   class="bg-[#D4AF37] hover:bg-[#C19A2F] text-black font-semibold px-10 py-5 text-xl rounded-xl transition-all">
-                    AGENDAR AGORA
+                <a href="#agendar" 
+                   class="bg-[#E8B923] hover:bg-[#D4A017] text-black font-bold px-10 py-5 text-xl rounded-2xl transition-all shadow-lg">
+                    AGENDAR HORÁRIO
                 </a>
                 <a href="tel:+5541984568034" 
-                   class="border-2 border-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-semibold px-10 py-5 text-xl rounded-xl transition-all">
+                   class="border-2 border-[#E8B923] hover:bg-[#E8B923] hover:text-black font-bold px-10 py-5 text-xl rounded-2xl transition-all">
                     (41) 98456-8034
                 </a>
             </div>
-            
-            <p class="mt-10 text-sm">Rua Lodovico Geronazzo, 838 - Boa Vista • Curitiba - PR</p>
-        </div>
-        
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="#D4AF37">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-9-9m0 0L5 14" />
-            </svg>
         </div>
     </section>
 
     <!-- SOBRE -->
-    <section class="py-24 bg-[#0F3C2B]">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section class="py-20 bg-[#2E2E2E]">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="heading text-5xl mb-8">Tradição que corta fundo</h2>
-                <p class="text-lg leading-relaxed mb-6">
-                    Na <strong>Estilo Vintage Barbearia</strong>, cada corte é uma experiência. Ambiente acolhedor com vibe retrô, barbeiros experientes e produtos de alta qualidade.
-                </p>
+                <span class="text-[#E8B923] uppercase tracking-widest text-sm">Boa Vista • Curitiba</span>
+                <h2 class="heading text-5xl mt-3 mb-6">Onde o estilo clássico encontra o homem moderno</h2>
                 <p class="text-lg leading-relaxed">
-                    Planos de assinatura ilimitada, cortes modernos e clássicos, barbas com toalha quente e muito mais. Seu estilo, nossa missão.
+                    Na Estilo Vintage Barbearia, cada corte é feito com atenção e técnica. 
+                    Ambiente acolhedor, barbeiros experientes e o verdadeiro ritual de barbearia.
                 </p>
+                <p class="mt-6 text-lg">Planos semanais e ilimitados disponíveis.</p>
             </div>
-            <div class="rounded-2xl overflow-hidden">
-                <img src="https://picsum.photos/id/1016/800/600" alt="Interior da Barbearia" class="w-full">
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/id/866/800/600" alt="Interior Barbearia Vintage" class="w-full">
             </div>
         </div>
     </section>
 
     <!-- SERVIÇOS -->
-    <section class="py-24 bg-[#1A1A1A]">
+    <section class="py-20 bg-[#1C1C1C]">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="heading text-5xl text-center mb-16">Nossos Serviços</h2>
+            <h2 class="heading text-5xl text-center mb-16">Nossos Destaques</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#0F3C2B] p-8 rounded-2xl hover:scale-105 transition-transform">
-                    <h3 class="text-2xl font-semibold mb-3 text-[#D4AF37]">Corte Masculino</h3>
-                    <p class="text-4xl font-bold mb-6">R$ 45</p>
-                    <p class="mb-6">Clássico, degradê, social, fade, tesoura ou máquina. Personalizado para seu rosto.</p>
-                    <a href="#" class="text-[#D4AF37] hover:underline">Agendar →</a>
+                <div class="bg-[#2E2E2E] p-8 rounded-3xl hover:-translate-y-2 transition-all">
+                    <img src="https://picsum.photos/id/201/600/400" alt="Corte Masculino" class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-2xl font-semibold mb-2">Corte Masculino</h3>
+                    <p class="text-[#E8B923] text-3xl font-bold mb-4">R$ 45</p>
+                    <p class="text-gray-300">Degradê, social, tesoura, fade e estilos modernos.</p>
                 </div>
-                
-                <div class="bg-[#0F3C2B] p-8 rounded-2xl hover:scale-105 transition-transform">
-                    <h3 class="text-2xl font-semibold mb-3 text-[#D4AF37]">Barba Completa</h3>
-                    <p class="text-4xl font-bold mb-6">R$ 40</p>
-                    <p class="mb-6">Toalha quente, design, hidratação e acabamento perfeito.</p>
-                    <a href="#" class="text-[#D4AF37] hover:underline">Agendar →</a>
+
+                <div class="bg-[#2E2E2E] p-8 rounded-3xl hover:-translate-y-2 transition-all">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Barba" class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-2xl font-semibold mb-2">Barba Completa</h3>
+                    <p class="text-[#E8B923] text-3xl font-bold mb-4">R$ 40</p>
+                    <p class="text-gray-300">Toalha quente, design e hidratação premium.</p>
                 </div>
-                
-                <div class="bg-[#0F3C2B] p-8 rounded-2xl hover:scale-105 transition-transform">
-                    <h3 class="text-2xl font-semibold mb-3 text-[#D4AF37]">Combo Corte + Barba</h3>
-                    <p class="text-4xl font-bold mb-6">R$ 75</p>
-                    <p class="mb-6">Economia e experiência completa em uma sessão.</p>
-                    <a href="#" class="text-[#D4AF37] hover:underline">Agendar →</a>
+
+                <div class="bg-[#2E2E2E] p-8 rounded-3xl hover:-translate-y-2 transition-all">
+                    <img src="https://picsum.photos/id/251/600/400" alt="Combo" class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-2xl font-semibold mb-2">Combo Corte + Barba</h3>
+                    <p class="text-[#E8B923] text-3xl font-bold mb-4">R$ 75</p>
+                    <p class="text-gray-300">A melhor experiência com desconto.</p>
                 </div>
-            </div>
-            <div class="text-center mt-12">
-                <p class="text-[#D4AF37] text-xl">Assinatura Ilimitada disponível • Consulte planos</p>
             </div>
         </div>
     </section>
 
     <!-- GALERIA -->
-    <section class="py-24 bg-[#0F3C2B]">
+    <section class="py-20 bg-[#2E2E2E]">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="heading text-5xl text-center mb-16">Resultados Reais</h2>
+            <h2 class="heading text-5xl text-center mb-12">Galeria de Cortes</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://picsum.photos/id/201/600/600" alt="Antes e Depois" class="rounded-xl hover:scale-105 transition">
-                <img src="https://picsum.photos/id/64/600/600" alt="Antes e Depois" class="rounded-xl hover:scale-105 transition">
-                <img src="https://picsum.photos/id/251/600/600" alt="Antes e Depois" class="rounded-xl hover:scale-105 transition">
-                <img src="https://picsum.photos/id/866/600/600" alt="Antes e Depois" class="rounded-xl hover:scale-105 transition">
+                <img src="https://picsum.photos/id/64/600/600" alt="Corte Degradê" class="rounded-2xl hover:scale-105 transition-all duration-300">
+                <img src="https://picsum.photos/id/201/600/600" alt="Barba Modelada" class="rounded-2xl hover:scale-105 transition-all duration-300">
+                <img src="https://picsum.photos/id/866/600/600" alt="Corte Clássico" class="rounded-2xl hover:scale-105 transition-all duration-300">
+                <img src="https://picsum.photos/id/1015/600/600" alt="Estilo Vintage" class="rounded-2xl hover:scale-105 transition-all duration-300">
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
-    <section class="py-24 bg-[#1A1A1A]">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="heading text-5xl mb-16">O que nossos clientes dizem</h2>
-            <div class="space-y-12">
-                <div>
-                    <p class="text-xl italic">"Melhor barbearia de Curitiba. Ambiente incrível, atendimento top e saí me sentindo outro homem!"</p>
-                    <p class="mt-4 text-[#D4AF37]">— João Silva</p>
-                </div>
-                <div>
-                    <p class="text-xl italic">"Barba com toalha quente mudou meu dia. Profissionais excepcionais!"</p>
-                    <p class="mt-4 text-[#D4AF37]">— Pedro Mendes</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AGENDAR (CTA Forte) -->
-    <section id="agendar" class="py-24 bg-gradient-to-br from-[#8C4A2E] to-[#1A1A1A]">
+    <!-- CTA AGENDAR -->
+    <section id="agendar" class="py-24 bg-gradient-to-br from-[#B38B5E] to-[#E8B923] text-black">
         <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="heading text-6xl mb-8">Pronto para transformar seu visual?</h2>
-            <p class="text-2xl mb-12">Vagas limitadas por dia. Agende agora e garanta seu horário.</p>
+            <h2 class="heading text-6xl mb-6">Transforme seu visual hoje</h2>
+            <p class="text-2xl mb-10">Vagas limitadas. Atendimento com hora marcada.</p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="tel:+5541984568034" class="bg-white text-black font-bold px-12 py-6 text-2xl rounded-2xl hover:bg-[#D4AF37] transition">
+                <a href="tel:+5541984568034" 
+                   class="bg-black text-white font-bold px-12 py-6 text-2xl rounded-2xl hover:bg-gray-900 transition">
                     LIGAR AGORA
                 </a>
-                <a href="https://wa.me/5541984568034" target="_blank" class="border-2 border-white font-bold px-12 py-6 text-2xl rounded-2xl hover:bg-white hover:text-black transition">
+                <a href="https://wa.me/5541984568034" target="_blank"
+                   class="bg-black text-white font-bold px-12 py-6 text-2xl rounded-2xl hover:bg-gray-900 transition">
                     WHATSAPP
                 </a>
             </div>
             
-            <p class="mt-8 text-sm">Instagram: <a href="https://www.instagram.com/estilovintage_barbershop/" class="underline">@estilovintage_barbershop</a></p>
+            <p class="mt-10 text-lg">
+                📍 Rua Lodovico Geronazzo, 838 - Boa Vista, Curitiba<br>
+                <a href="https://www.instagram.com/estilovintage_barbershop/" target="_blank" class="underline">Instagram @estilovintage_barbershop</a>
+            </p>
         </div>
     </section>
 
-    <!-- MAPA E CONTATO -->
-    <footer class="bg-black py-12">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
-            <div>
-                <h3 class="text-[#D4AF37] text-xl mb-4">Endereço</h3>
-                <p>Rua Lodovico Geronazzo, 838<br>Boa Vista, Curitiba - PR</p>
-            </div>
-            <div>
-                <h3 class="text-[#D4AF37] text-xl mb-4">Horário</h3>
-                <p>Segunda: 14h - 20h<br>Outros dias: consulte</p>
-            </div>
-            <div>
-                <h3 class="text-[#D4AF37] text-xl mb-4">Contato</h3>
-                <p>(41) 98456-8034</p>
-                <p class="mt-4"><a href="https://www.instagram.com/estilovintage_barbershop/" class="underline">Instagram</a></p>
-            </div>
-        </div>
-        <div class="text-center text-sm mt-12 text-gray-500">
-            © 2026 Estilo Vintage Barbearia • Todos os direitos reservados
-        </div>
+    <footer class="bg-black py-12 text-center text-sm text-gray-400">
+        <p>Estilo Vintage Barbearia © 2026 • Todos os direitos reservados</p>
     </footer>
 
 </body>
